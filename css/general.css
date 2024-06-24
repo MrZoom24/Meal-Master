@@ -1,0 +1,74 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* CSS RESET */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* NAVIGATION */
+.nav {
+  width: 100%;
+  background-color: #3a3939;
+  color: white;
+  height: 10rem;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  height: 100%;
+  margin: auto;
+}
+
+.logo {
+  font-family: "Jaro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  text-align: center;
+}
+
+.logo-text-top {
+  font-size: 5rem;
+  font-weight: 500;
+  color: #e3b261;
+}
+
+.logo-text-bottom {
+  font-size: 3.5rem;
+  line-height: 0.5;
+  color: #d9d9d9;
+}
