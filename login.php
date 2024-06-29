@@ -1,8 +1,9 @@
 <?php
+session_start();
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
-define('DB_NAME', 'mealmaster');
+define('DB_NAME', 'mealmasters');
 
 $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
@@ -12,24 +13,19 @@ if($conn->connect_error){
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
   if(isset($_POST['login'])){
-    // Handle login
+
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Construct the SQL query
-    $sql = "SELECT users_id, username, password FROM users WHERE username = '$username' AND password = '$password'";
-    // Execute the query
+    
+    $sql = "SELECT user_id, username, password FROM users WHERE username = '$username' AND password = '$password'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-      // Fetch the result
       $row = $result->fetch_assoc();
 
-      // Set session variables
-      $_SESSION['users_id'] = $row['users_id'];
-      $_SESSION['username'] = $row['username'];
+      $_SESSION['user_id'] = $row['user_id'];
 
-      // Redirect to home page
       header("Location: homepage.php");
       exit();
   } else {
@@ -38,11 +34,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   }
 
   }elseif (isset($_POST['register'])){
-    // Handle registration
     $username = $_POST['username'];
     $password = $_POST['password'];
 
     $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
+
     if(mysqli_query($conn, $sql)){
       $message = "Registered Succesfully!";
       echo "<script>alert('$message');</script>";
@@ -61,7 +57,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./css/general.css" rel="stylesheet">
   <link href="./css/login.css" rel="stylesheet">
-  <title>IBSU Recipes | Login</title>
+  <title>Meal Master | Login</title>
 </head>
 <body>
   <main class="main">

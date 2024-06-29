@@ -1,0 +1,18 @@
+.main {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.main-container {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  row-gap: 4rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}

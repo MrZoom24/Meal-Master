@@ -1,0 +1,184 @@
+.main {
+  width: 70%;
+  margin: auto;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+
+.recipe-description {
+  text-align: center;
+  font-size: 2rem;
+  color: #3a3939;
+  font-family: "Roboto", sans-serif;
+}
+
+.recipe-image {
+  height: 80rem;
+}
+
+.recipe-instruction {
+  width: 100%;
+  display: flex;
+  background-color: #3a3939;
+  padding: 5rem;
+}
+
+.recipe-ingredients {
+  width: 50%;
+}
+
+.recipe-header {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #e3b261;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.recipe-ingredients ul {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5rem;
+  padding-left: 2rem;
+  color: #d9d9d9;
+}
+
+.recipe-ingredients ul b {
+  color: #e3b261;
+  font-weight: 500;
+}
+
+.recipe-ingredients ul li::marker {
+  color: #e3b261;
+}
+
+.recipe-steps {
+  width: 50%;
+}
+
+.recipe-steps ol {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5rem;
+  padding-left: 2rem;
+  color: #d9d9d9;
+}
+
+.recipe-steps ol li::marker {
+  color: #e3b261;
+  font-weight: 500;
+}
+
+.recipe-review {
+  margin-top: 5rem;
+  width: 100%;
+  background-color: #3a3939;
+  padding: 5rem;
+}
+
+.review-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-left {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+}
+
+.rating-label {
+  font-size: 3rem;
+  color: #e3b261;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+.rating-input {
+  margin: 0rem 2rem 0rem 1rem;
+  width: 5rem;
+  height: 5rem;
+  background-color: #d9d9d9;
+  color: #3a3939;
+  font-size: 3rem;
+}
+
+.rating-submit {
+  width: 15rem;
+  height: 5rem;
+  font-size: 3rem;
+  color: #3a3939;
+  background-color: #d9d9d9;
+}
+
+.rating-submit:hover {
+  background-color: #e3b261;
+  cursor: pointer;
+}
+
+.review-rating {
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
+  color: #e3b261;
+  font-weight: 700;
+}
+
+.review-container form .rating-submit {
+  width: auto;
+}
+
+.comment-container {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.comment-container form {
+  margin-top: 10rem;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.comment-input {
+  width: 85%;
+  height: 10rem;
+  font-size: 2rem;
+  resize: none;
+  background-color: #d9d9d9;
+  color: #3a3939;
+  margin-bottom: 3rem;
+}
+
+.comment {
+  margin-bottom: 2rem;
+}
+
+.comment-author {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5rem;
+  color: #e3b261;
+}
+
+.comment-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  color: #d9d9d9;
+}
+
+.active-submit {
+  background-color: #e3b261;
+}
+
+.active-submit:hover {
+  background-color: #d9d9d9;
+}
